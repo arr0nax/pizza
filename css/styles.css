@@ -1,22 +1,65 @@
-#requests {
-  height: 200px;
-}
-
 .Jumbotron, .pizza, .checkout, .address {
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
+.Jumbotron {
+  background-image: url('../img/dominospride.svg');
+  background-size: 100% 100%
+}
+
+.pizza {
+  background-image: url('../img/pizza.jpg');
+  background-position: 50% 50%;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.toppingswell {
+  overflow: hidden;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+
+
+
+.address {
+  display: none;
+}
+
+#makemeapizza {
+  background-image: url('../img/eatingpizza.jpg');
+  background-position: 50% 50%;
+  height: 80px;
+  width: 300px;
+  font-size: 25px;
+  text-shadow: 2px 2px black;
+}
+
+#costmessage {
+  float:right;
+}
+
+#startDelivery {
+  display: none;
+}
+
+#requests {
+  height: 200px;
+}
+
+
 #previousOrders {
-  position: absolute;
-  margin-left: 60vw;
+float: right;
 
 }
 
 #pizzaList {
   list-style: none;
+  padding-left: 0px;
 }
 
-.address {
+
+#completed {
   display: none;
 }
