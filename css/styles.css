@@ -13,10 +13,10 @@ body {
 }
 
 .Jumbotron {
-  background-image: url('../img/dominos.jpg');
+  background-image: url('../img/dominos.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 50% 100%
+  height: 150px;
 }
 
 .pizza {
