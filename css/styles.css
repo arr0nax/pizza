@@ -1,0 +1,22 @@
+#requests {
+  height: 200px;
+}
+
+.Jumbotron, .pizza, .checkout, .address {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#previousOrders {
+  position: absolute;
+  margin-left: 60vw;
+
+}
+
+#pizzaList {
+  list-style: none;
+}
+
+.address {
+  display: none;
+}

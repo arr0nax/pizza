@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pizza Maker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="Jumbotron">
+      <h1>It's Delivery!</h1>
+      <h2>Pizza by Dominoes</h2>
+    </div>
+    <form class="pizza well" action="" method="post">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group toppings">
+            <label for=""><input type="checkbox" id="pepperoni" value="pepperoni">pepperoni</label><br>
+            <label for=""><input type="checkbox" id="cheese" value="cheese">cheese</label><br>
+            <label for=""><input type="checkbox" id="anchovies" value="anchovies">anchovies</label><br>
+            <label for=""><input type="checkbox" id="artichokes" value="artichokes">artichokes</label><br>
+            <label for=""><input type="checkbox" id="sausage" value="sausage">sausage</label><br>
+            <label for=""><input type="checkbox" id="hot sausage" value="hot sausage">hot sausage</label><br>
+            <label for=""><input type="checkbox" id="olives" value="olives">olives</label><br>
+            <label for=""><input type="checkbox" id="mushrooms" value="mushrooms">mushrooms</label><br>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group toppings">
+            <label for=""><input type="checkbox" id="peppers" value="peppers">peppers</label><br>
+            <label for=""><input type="checkbox" id="pineapple" value="pineapple">pineapple</label><br>
+            <label for=""><input type="checkbox" id="truffles" value="truffles">truffles</label><br>
+            <label for=""><input type="checkbox" id="humiliation" value="humiliation">humiliation</label><br>
+            <label for=""><input type="checkbox" id="fennel" value="fennel">fennel</label><br>
+            <label for=""><input type="checkbox" id="arugala" value="arugala">arugala</label><br>
+            <label for=""><input type="checkbox" id="eggplant" value="eggplant">eggplant</label><br>
+            <label for=""><input type="checkbox" id="rosehips" value="rosehips">rosehips</label><br>
+          </div>
+        </div>
+        <div class="well" id='previousOrders'>
+          <div class="previousOrders">
+            <h3>Previous Pizzas</h3>
+            <ul id='pizzaList'>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-container pizzaSubmit">
+        <div class="size">
+          <label for=""><input type="radio" name="sizeradios" id="small" value="3" checked="checked">small</label><br>
+          <label for=""><input type="radio" name="sizeradios" id="medium" value="5">medium</label><br>
+          <label for=""><input type="radio" name="sizeradios" id="large" value="8">large</label><br>
+          <label for=""><input type="radio" name="sizeradios" id="extra-large" value="10">extra-large</label><br>
+        </div>
+        <button type="submit" name="button">Make Me a Pizza</button>
+      </div>
+    </form>
+    <div class="checkout">
+      <h2>This pizza will cost <span id='price-display'></span> dollars.</h2>
+      <button type="button" id="startDelivery">These are the pizzas I want delivered</button>
+    </div>
+    <form class="address" action="index.html" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" id="name" value="">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" type="text" id="address" value="">
+      </div>
+      <div class="form-group">
+        <label for="requests">Special Requests</label>
+        <input class="form-control" type="text" id="requests" value="">
+      </div>
+      <button type="submit" name="button">Deliver It</button>
+    </form>
+  </body>
+</html>
