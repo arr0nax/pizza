@@ -53,10 +53,11 @@ $(function() {
     $('#deliveryPizzas').text('')
     for (var i=0;i<pizzaBook.length;i++) {
       if($('#pizza'+i).prop('checked')) {
-        $('#deliveryPizzas').append('<li>'+pizzaBook[i].display())
+        $('#deliveryPizzas').append('<li>'+pizzaBook[i].display()+'</li>')
       };
     };
     $('#startDelivery').show();
+    $('.checkout').show();
   })
 
 
@@ -68,6 +69,8 @@ $(function() {
       };
     };
     $('.address').show();
+    $('.pizza').hide();
+    $('.checkout').hide();
   });
 
 

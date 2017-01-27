@@ -62,10 +62,11 @@
       </div>
     </form>
     <div class="checkout">
-      <button type="button" id="startDelivery">These are the pizzas I want delivered</button>
+      <h2>Review Order</h2>
       <ul id="deliveryPizzas">
 
       </ul>
+      <button type="button" id="startDelivery">Deliver Them Pizzas!</button>
     </div>
     <form class="address" action="index.html" method="post">
       <div class="form-group">
@@ -80,13 +81,14 @@
         <label for="requests">Special Requests</label>
         <input class="form-control" type="text" id="requests" value="">
       </div>
-      <button type="submit" name="button">Deliver It</button>
+      <button id='deliverIt' type="submit" name="button">Deliver It</button>
     </form>
     <div class="completed">
       <h3><span id="ordercompleted"></span></h3>
       <ul id="finalorderlist">
 
       </ul>
+      <img src="img/pizzaman.jpg" alt="">
     </div>
   </body>
 </html>

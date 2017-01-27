@@ -1,11 +1,22 @@
-.Jumbotron, .pizza, .checkout, .address {
+.Jumbotron, .pizza, .checkout, .address, .completed {
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
+body {
+  background-image: url('../img/cheese.jpg');
+  background-position: 50% 50%;
+  color: white;
+  font-family: "Comic Sans MS";
+  text-shadow: 2px 2px black;
+  font-weight: bold;
+}
+
 .Jumbotron {
-  background-image: url('../img/dominospride.svg');
-  background-size: 100% 100%
+  background-image: url('../img/dominos.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 100%
 }
 
 .pizza {
@@ -20,12 +31,23 @@
   background-color: rgba(0,0,0, 0.3);
 }
 
-
+.checkout {
+  display: none;
+}
 
 
 .address {
   display: none;
 }
+
+.completed {
+  display: none;
+}
+
+.completed img {
+  width: 800px;
+}
+
 
 #makemeapizza {
   background-image: url('../img/eatingpizza.jpg');
@@ -42,6 +64,20 @@
 
 #startDelivery {
   display: none;
+  background-image: url('../img/pizzaman.jpg');
+  background-position: 50% 50%;
+  height: 80px;
+  width: 400px;
+  font-size: 22px;
+  text-shadow: 2px 2px black;
+}
+
+#deliveryPizzas {
+  list-style: none;
+}
+
+#deliveryPizzas li {
+  font-size: 20px;
 }
 
 #requests {
@@ -51,7 +87,15 @@
 
 #previousOrders {
 float: right;
+}
 
+#deliverIt {
+  background-image: url('../img/pizzaman.jpg');
+  background-position: 50% 50%;
+  height: 100px;
+  width: 300px;
+  font-size: 22px;
+  text-shadow: 2px 2px black;
 }
 
 #pizzaList {
@@ -59,7 +103,7 @@ float: right;
   padding-left: 0px;
 }
 
-
-#completed {
-  display: none;
+#finalorderlist {
+  list-style: none;
+  font-size: 20px;
 }
