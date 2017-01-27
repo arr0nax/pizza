@@ -24,6 +24,9 @@ var pizzaDeliveryBook = []
 
 ////////////FRONT END
 $(function() {
+
+
+  ////////////CREATE NEW PIZZA ON FORM SUBMIT
   $('.pizza').submit(function(event) {
     event.preventDefault();
     var currentPizza = new Pizza()
@@ -40,6 +43,8 @@ $(function() {
     };
   });
 
+
+///////////////////UPDATE PIZZA PRICE ON EACH TOPPING ADD
   $('.pricecheck').click(function() {
     var currentPizza = new Pizza()
     $('.toppings input[type="checkbox"]:checked').each(function() {
@@ -49,19 +54,23 @@ $(function() {
     $('#price-display').text(currentPizza.cost());
   });
 
+//////////////////UPDATE TOTAL ORDER PRICE ON SELECTED PIZZAS
   $('#pizzaList').click(function() {
     $('#deliveryPizzas').text('')
+    var totalprice = 0
     for (var i=0;i<pizzaBook.length;i++) {
       if($('#pizza'+i).prop('checked')) {
         $('#deliveryPizzas').append('<li>'+pizzaBook[i].display()+'</li>')
+        totalprice = totalprice + parseInt(pizzaBook[i].cost());
       };
     };
+    $('#totalcost').text(totalprice);
     $('#startDelivery').show();
     $('.checkout').show();
   })
 
 
-
+/////////////////BEGIN COLLECTING USER NAME AND ADDRESS
   $('#startDelivery').click(function() {
     for (var i=0;i<pizzaBook.length;i++) {
       if($('#pizza'+i).prop('checked')) {
@@ -73,7 +82,7 @@ $(function() {
     $('.checkout').hide();
   });
 
-
+///////////SHOW FINAL PAGE
   $('.address').submit(function(event) {
     event.preventDefault();
     var name = $('#name').val();
@@ -85,7 +94,13 @@ $(function() {
     for (var i=0;i<pizzaDeliveryBook.length;i++) {
       $('#finalorderlist').append('<li>'+pizzaDeliveryBook[i].display()+'</li>');
     };
-
-
   });
+
+////////////////CLICK ON JUMBOTRON TO RELOAD PAGE
+  $('Jumbotron').click(function(event) {
+    location.reload();
+  });
+
+
+
 });
